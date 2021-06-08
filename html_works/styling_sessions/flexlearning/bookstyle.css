@@ -1,0 +1,110 @@
+header{
+    background-color:grey ;
+    padding: 10px;
+    
+    
+}
+a{
+    color:white;
+    text-decoration: none;
+    padding: 50px;    
+}
+a:hover{
+    color: red;
+    
+}
+.row,.row-2,.row-3{
+    width: 382px;
+    height: 556px;
+    border: 1px solid black;
+    background-color:white;
+    text-align: center;
+    font-style:italic;
+    color: blue;
+    
+    
+    
+}
+.col img,.colo-2 img,.colo-3 img{
+    width: 359px;
+    height: 274px;
+    padding: 10px;
+    
+    
+}
+.parent{
+    
+    background-color: white;
+    display: flex;
+}
+
+.child{
+    width: 300px;
+    height: 23px;
+    border: black 1px solid;
+}
+.col-1,.col-2,.col-3{
+    background-color: white;
+}
+.r2{
+    position: absolute;
+    bottom: 10px;
+    left: 500px;
+}
+.r1{
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+}
+.r3{
+    position: absolute;
+    bottom: 10px;
+    left: 900px;
+}
+.book{
+    width: 382px;
+    height: 612px;
+    border: 1px solid black;
+    background-color:white;
+    text-align: center;
+    font-style:italic;
+    color: blue;
+
+    
+    
+}
+.gallery img,.gallery1 img,.gallery2 img{
+    width: 359px;
+    height: 274px;
+    padding: 10px;
+}
+.parent2{
+    
+    background-color: white;
+    display: flex;
+}
+
+.child2{
+    width: 300px;
+    height: 23px;
+    border: black 1px solid;
+}
+.col-1,.col-2,.col-3{
+    background-color: white;
+}
+.b1{
+    position: absolute;
+    top: 631px;
+    left: 100px;
+    
+}
+.b2{
+    position: absolute;
+    top: 631px;
+    left: 500px;
+}
+.b3{
+    position: absolute;
+    top: 631px;
+    left: 900px;
+}

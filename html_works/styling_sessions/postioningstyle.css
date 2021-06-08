@@ -1,0 +1,16 @@
+div{
+    width:300px ;
+    height: 100px;
+    border: 1px solid black;
+}
+.section1{
+    position: absolute;
+    top: 200px;
+    background-color: blue;
+}
+.child1{
+    background-color: brown;
+}
+.child2{
+    background-color: brown;
+}

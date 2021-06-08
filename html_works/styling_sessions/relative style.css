@@ -1,0 +1,35 @@
+
+
+
+
+.row{
+    width: 500px;
+    height: 200px;
+    background-color: darkmagenta;
+    border: 1px solid black;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+.col-1,.col-2,.col-3{
+    width: 100px;
+    height: 100px;
+    border: black solid 1px;
+}
+.col-1{
+    background-color: blanchedalmond;
+}
+.col-2{
+    background-color: chartreuse;
+    position: absolute;
+    left: 102px;
+    top: 0%;
+}
+.col-3{
+    background-color: crimson;
+    position: absolute;
+    top:0%;
+    left: 204px;
+}
+
