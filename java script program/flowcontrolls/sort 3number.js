@@ -1,28 +1,30 @@
-var x=0,y=-1,z=4;
-if((x>y)&&(x>z)){
-    if(y>z)
+var num1=0,num2=-1,num3=4;
+if((num1>num2)&&(num1>num3)){
+    if(num2>num3)
     {
-        console.log(x,y,z);
+        console.log(num1,num2,num3);
     }
     else{
-        console.log(x,z,y);
+        console.log(num1,num3,num2);
     }
 }
-else if((y>x)&&(y>z)){
-    if(x>z)
+else if((num2>num1)&&(num2>num3))
+{
+    if(num1>num3)
     {
-        console.log(y,x,z);
+        console.log(num2,num1,num3);
     }
     else{
-        console.log(y,z,x);
+        console.log(num2,num3,num1);
     }
 }
-else if((z>x)&&(z>y)){
-    if(x>y)
+else if((num3>num1)&&(num3>num2)){
+    if(num1>num2)
     {
-        console.log(z,x,y);
+        console.log(num3,num1,num2);
     }
-    else{
-        console.log(z,y,x);
+    else
+    {
+        console.log(num3,num2,num1);
     }
 }
