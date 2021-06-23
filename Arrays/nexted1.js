@@ -28,7 +28,7 @@ for(let cost of product){
 }
 for(let stock of product){
     if(stock=="boost"){
-    console.log(stock);
+    console.log(stock[2]);
     }
 
 
