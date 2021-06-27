@@ -1200,11 +1200,36 @@ var todos=[
       "completed": false
     }
   ]
-  for(let user of todos){
-    console.log(user.userId);
-  }
-  for(let user of todos){
+  // for(let user of todos){
+  //   console.log(user.userId);
+  // }
+  // for(let user of todos){
     
-    console.log(user.completed);
-    }
+  //   console.log(user.completed);
+  //   }
   
+
+  var mytodos={}
+  for(let todo of todos){
+    let id=todo.userId
+    if(id in mytodos){
+      if(todo.completed==true){
+        mytodos[id]["total"]+=1;
+        mytodos[id]["finished"]+=1;
+      }
+      else{
+        mytodos[id]["total"]+=1;
+        mytodos[id]["pending"]+=1;
+      }
+    }
+      else{
+         if(todo.completed==true){
+        mytodos[id]={total:1,finished:1,pending:0}
+         }
+        else{
+        mytodos[id]={total:1,finished:0,pending:1}
+        }
+      }
+  }  
+  console.log(mytodos);
+    

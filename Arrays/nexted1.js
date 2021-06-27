@@ -33,3 +33,6 @@ for(let stock of product){
 
 
 }
+
+var highest=product.reduce((item1,item2)=>item1[2]>item2[2]?item1:item2)
+console.log(highest);

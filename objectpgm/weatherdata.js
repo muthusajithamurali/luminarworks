@@ -29,14 +29,8 @@ for(let data of temperature){
 }
 console.log(weather)
 
-temperature.sort((a,b)=>b-a);
-console.log("descending",weather);
-
-var highest=32;
- for(let data of temperature){
-    if(dist>highest){
-       highest=dist;
-     }
- }
-console.log(highest);
+function districtsort(data){
+    return Object.entries(data).sort((dist1,dist2)=>dist2[1]-dist1[1])
+}
+console.log (districtsort(weather));
 

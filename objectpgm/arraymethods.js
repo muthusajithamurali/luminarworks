@@ -18,3 +18,18 @@ console.log(cubes);
 
 var evens=arr.filter(num=>num%2==0)
 console.log(evens);
+
+var sum=arr.reduce((num1,num2)=>num1+num2)
+console.log(sum);
+
+var max=arr.reduce((num1,num2)=>num1>num2?num1:num2)
+console.log(max);
+
+var min=arr.reduce((num1,num2)=>num1<num2?num1:num2)
+console.log(min);
+
+let adding=(...args)=>args.reduce((num1,num2)=>num1+num2)
+console.log(adding(10,20,20,100));
+
+var arr=[10,20,30,40]
+arr.forEach(num=>console.log(num))

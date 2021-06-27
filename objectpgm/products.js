@@ -23,10 +23,27 @@ console.log(below_fifty);
 var out_of_stock=products.filter(item=>item.aval_qty==0)
 console.log(out_of_stock);
 //print product available in range of price 50-100
-var mid_products=products.filter(item=>item.mrp>50&item.mrp<100)
-console.log(mid_product);
+var mid_range=products.filter(item=>item.mrp>50&item.mrp<100)
+console.log(mid_range);
 
 var names_with_b=products.filter(item=>item.name[0]=='b')
 console.log(names_with_b);
 
 //if mrp>55 add offer of 5% mrp<50 offer:0%
+var pdt_offer=products.filter(item=>(item.mrp>55?item.offer="5%":item.offer="0%"))
+console.log(pdt_offer);
+
+//costly product
+
+var costly_pdt=products.reduce((item1,item2)=>item1.mrp>item2.mrp?item1:item2)
+console.log(costly_pdt);
+
+var low_pdt=products.reduce((item1,item2)=>item1.mrp<item2.mrp?item1:item2)
+console.log(low_pdt);
+
+// find()
+var product_details=products.find(item=>item.name=="carrot")
+console.log(product_details);
+
+var is_available=products.some(item=>item.mrp>30 & item.mrp<50)
+console.log(is_available);

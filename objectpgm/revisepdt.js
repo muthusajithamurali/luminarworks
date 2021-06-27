@@ -31,3 +31,10 @@ console.log(names_with_b);
 
 var pdt_offer=products.filter(item=>(item.mrp>55?item.offer="5%":item.offer="0%"))
 console.log(pdt_offer);
+
+//costly product
+
+var costly_pdt=products.reduce((item1,item2)=>item1.mrp>item2.mrp?item1:item2)
+console.log(costly_pdt);
+
+
