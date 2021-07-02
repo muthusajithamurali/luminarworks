@@ -1200,13 +1200,7 @@ var todos=[
       "completed": false
     }
   ]
-  // for(let user of todos){
-  //   console.log(user.userId);
-  // }
-  // for(let user of todos){
-    
-  //   console.log(user.completed);
-  //   }
+  
   
 
   var mytodos={}
