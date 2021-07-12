@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    body{
+        background-color: cadetblue;
+    }
+    
+    .header{
+    color:black;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="row mt-5 " >
+            <div class="col-4"></div>
+            <div class="col-4">
+                <h3 class="header">WHEATHER ALERT</h3>
+                <input type="text" placeholder="Entercity name" id="city">
+                <button class="btn btn-success" onclick="fetchcity()">fetchdata</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" id="result"></div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function populate(city){
+     let name=city.name;
+     let temperature=city.main.temp;
+     let weather=city.weather[0].main;
+     let humidity=city.main.humidity;
+     let wind=city.wind.speed;
+     let html_data=`
+     <div class="card" style="width: 18rem;">
+      
+  <div class="card-body">
+    <h5 class="card-title">City Name:${name}</h5>
+    </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">TEMPERATURE:${temperature}</li>
+    <li class="list-group-item">WEATHER:${weather}</li>
+    <li class="list-group-item">HUMIDITY:${humidity}</li>
+    <li class="list-group-item">WIND:${wind}</li>
+    
+  </ul>
+  
+</div>
+     `
+  result.innerHTML=html_data;   
+
+    }
+  function fetchcity(){
+      let city_name=city.value;
+      let url=`http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=0e6ccbfecaf5164f6a4247815a844edd&units=metric`
+      fetch(url).then(res=>res.json()).then(data=>populate(data))
+  }
+</script>
+</html>

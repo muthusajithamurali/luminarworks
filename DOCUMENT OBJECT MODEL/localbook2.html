@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="book" placeholder="bookname"> <br>
+    <input type="text" id="auth" placeholder="author"> <br>
+    <input type="text" id="rate" placeholder="price"> <br>
+    <input type="text" id="copies" placeholder="no_copies"> <br>
+
+    <button onclick="createuser()">create</button>
+
+
+<script>
+function createuser(){
+    let bookname=book.value;
+    let author=auth.value;
+    let price=rate.value;
+    let no_copies=copies.value;
+    let user={
+        bookname:bookname,
+        author:author,
+        price:price,
+        no_copies:no_copies
+    }
+    localStorage.setItem(user.bookname,JSON.stringify(user))
+    alert("user created")
+    location.reload(true)
+    
+}
+
+</script>
+
+</body>
+</html>
